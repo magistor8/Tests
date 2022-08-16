@@ -12,8 +12,18 @@ class EmailValidatorTest {
     }
 
     @Test
+    fun emailValidator_CorrectEmailSimple_ReturnsTrue2() {
+        assertTrue(EmailValidator.isValidEmail("nameemail.com"))
+    }
+
+    @Test
     fun emailValidator_CorrectEmailSubDomain_ReturnsTrue() {
         assertTrue(EmailValidator.isValidEmail("name@email.co.uk"))
+    }
+
+    @Test
+    fun emailValidator_CorrectEmailSubDomain_ReturnsTrue2() {
+        assertTrue(EmailValidator.isValidEmail("name@email.co.uk@tt"))
     }
 
     @Test
